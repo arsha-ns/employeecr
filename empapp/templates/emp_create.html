@@ -1,0 +1,44 @@
+{%extends 'base.html' %}
+{%block main_block%}
+<div class="container p-5 border shadow mt-5 ">
+        
+    <form action="" method="post">
+        <h1 class="text-center">ADD EMPLOYEE</h1>
+        {%csrf_token%}
+
+        <!-- {{form.as_p}} -->
+    <div class="row">
+        <div class="col-6">
+            <label for="">Name</label>
+            {{form.name}}
+        </div>
+        <div class="col-6">
+            <label for="">department</label>
+            {{form.department}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label for="">salary</label>
+            {{form.salary}}
+        </div>
+        <div class="col-6">
+            <label for="">location</label>
+            {{form.location}}
+        </div>
+
+
+    </div>
+    <div class="row">
+        <div class="col-12">
+            <label for="">address</label>
+            {{form.address}}
+        </div>
+    </div>
+    
+
+    
+    <button type="submit" class="btn btn-primary col-12 mt-5">add</button>
+    </form>
+</div>
+{%endblock%}
